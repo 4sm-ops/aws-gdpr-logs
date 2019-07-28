@@ -118,14 +118,14 @@ You must attach an **IAM** role to **each EC2 instance with your web site/ web a
 We recommend you to equip **all your production Windows and Linux servers** processing Personal Data with CloudWatch agents. Installation script with predefined settings for:
 
 ### Windows and IIS Web server: PowerShell Script Run with Admin awpermissions.
-1. Download installation files: 
+1. Download installation script: https://github.com/rustamabdullin/aws-gdpr-logs/tree/master/aws-gdpr-monitoring-scripts/windows
 1. Open PowerShell with Admin permissions.
 1. Run installation:
 
 ![CloudWatch Windows Script](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/cloudwatch-windows.png)
 
 ### Linux with apache web server:
-1. Download installation script: 
+1. Download installation script: https://github.com/rustamabdullin/aws-gdpr-logs/tree/master/aws-gdpr-monitoring-scripts/linux
 1. Execute script with super user account permissions:
 
 ![CloudWatch Linux Script](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/cloudwatch-linux.png)
