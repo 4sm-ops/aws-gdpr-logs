@@ -1,0 +1,34 @@
+{
+	"logs": {
+		"logs_collected": {
+			"windows_events": {
+				"collect_list": [
+					{
+						"event_format": "xml",
+						"event_levels": [
+							"INFORMATION",
+							"WARNING",
+							"ERROR",
+							"CRITICAL"
+						],
+						"event_name": "Security",
+						"log_group_name": "Security",
+						"log_stream_name": "{instance_id}"
+					},
+					{
+						"event_format": "xml",
+						"event_levels": [
+							"WARNING",
+							"ERROR",
+							"CRITICAL"
+						],
+						"event_name": "System",
+						"log_group_name": "System",
+						"log_stream_name": "{instance_id}"
+					}
+				]
+			}
+		}
+	}
+}
+
