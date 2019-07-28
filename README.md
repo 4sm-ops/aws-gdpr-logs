@@ -1,9 +1,6 @@
 # aws-gdpr-logs
 Amazon AWS GDPR Compliance Recommendations - Security Monitoring 
 
-# aws-gdpr-logs
-Amazon AWS GDPR Compliance Recommendations - Security Monitoring 
-
 # Notices
 
 This repository provided for informational purposes only. AWS customers are responsible for making their own
@@ -43,17 +40,26 @@ Amazon GuardDuty is a security service featuring intelligent threat detection an
 
 The service uses machine learning, anomaly detection, and integrated threat intelligence to identify and prioritize potential threats. GuardDuty analyzes tens of billions of events across multiple AWS data sources, such as AWS CloudTrail, Amazon VPC Flow Logs, and DNS logs.
 
+![GuardDuty How it works](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/guardduty-howitworks.png)
+
 Amazon provides GuardDuty for 30-days at no cost. You will receive full access to GuardDuty features and its detection findings during the free trial.
 
 To use GuardDuty, you must first enable it. Use the following procedure to enable GuardDuty.
 
 1. Open https://console.aws.amazon.com/guardduty/home with root account.
 1. When you open the **GuardDuty** console for the first time, choose **Get Started**, and then choose **Enable GuardDuty**.
+
+    ![GuardDuty Get Started](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/guardduty-getstarted.png)
+
+    ![GuardDuty Enable](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/guardduty-enable.png)
+
 1. Enable **GuardDuty** in each region with production environment.
 
 ## Check GuardDuty Dashboard
 
 Open https://console.aws.amazon.com/guardduty/home to verify existing findings.
+
+![GuardDuty Sample Logs](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/guardduty-samplelogs.png)
 
 # CloudWatch deployment
 
@@ -65,6 +71,8 @@ Our goal is to collect native EC2 Operating systems logs and store it in a secur
 
 CloudWatch collects monitoring and operational data in the form of logs, metrics, and events, providing you with a unified view of AWS resources, applications and services that run on AWS, and on-premises servers.
 
+![CloudWatch How it works](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/cloudwatch-howitworks.png)
+
 ## Preparing IAM permissions
 
 The IAM identity (user, role, group) that you use to enable CloudWatch must have the required permissions. EC2 Instances should be equipped with appropriate permissions as well. 
@@ -72,6 +80,8 @@ The IAM identity (user, role, group) that you use to enable CloudWatch must have
 1. To create the IAM role necessary for each server to run the CloudWatch agent sign in to the AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/.
 
 1. In the navigation pane, choose **Roles** and then choose **Create role**.
+
+    ![CloudWatch Create Role](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/cloudwatch-createrole.png)
 
 1. Under **Select** type of trusted entity, choose **AWS service**.
 
@@ -99,6 +109,8 @@ You must attach an **IAM** role to **each EC2 instance with your web site/ web a
 
 1. Select the instance, choose **Actions -> Instance Settings -> Attach/Replace IAM role**.
 
+    ![CloudWatch Attach Role](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/cloudwatch-attachrole.png)
+
 1. Select the IAM **CloudWatchAgentServerPolicy** role to attach to your instance, and choose **Apply**.
 
 ## CloudWatch Installation
@@ -110,11 +122,18 @@ We recommend you to equip **all your production Windows and Linux servers** proc
 1. Open PowerShell with Admin permissions.
 1. Run installation:
 
+![CloudWatch Windows Script](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/cloudwatch-windows.png)
+
 ### Linux with apache web server:
 1. Download installation script: 
 1. Execute script with super user account permissions:
+
+![CloudWatch Linux Script](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/cloudwatch-linux.png)
 
 ## Verify CloudWatch Dashboard
 
 Verify that logs are exists in appropriate AWS Dashboard: https://console.aws.amazon.com/cloudwatch/home?#logs
 
+![CloudWatch Dashboard](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/cloudwatch-dashboard.png)
+
+![CloudWatch Graph](https://github.com/rustamabdullin/aws-gdpr-logs/blob/master/aws-gdpr-monitoring-misc/cloudwatch-graph.png)
